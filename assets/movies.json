@@ -1,0 +1,42 @@
+[
+  {
+    "Title": "The Lion King",
+    "Type": "Adventure, Family, Fantasy",
+    "Year": "2019",
+    "Runtime": "118 min",
+    "Poster": "assets/images/lion_king.jpg",
+    "Description": "All Clara wants is a key -a one-of-a-kind key that will unlock a box that holds a priceless gift from her mother. A golden thread, presented to her at godfather Drosselmeyer's annual holiday party, leads her to the coveted key-which promptly disappears into a strange and mysterious parallel world..."
+  },
+  {
+    "Title": "Mowgli",
+    "Type": "Adventure, Family, Fantasy",
+    "Year": "2018",
+    "Runtime": "104 min",
+    "Poster": "assets/images/mowgli.jpg",
+    "Description": "All Clara wants is a key -a one-of-a-kind key that will unlock a box that holds a priceless gift from her mother. A golden thread, presented to her at godfather Drosselmeyer's annual holiday party, leads her to the coveted key-which promptly disappears into a strange and mysterious parallel world..."
+  },
+  {
+    "Title": "Doctor Strange",
+    "Type": "Adventure, Family, Fantasy",
+    "Year": "2016",
+    "Runtime": "115 min",
+    "Poster": "assets/images/doctor_strange.jpg",
+    "Description": "All Clara wants is a key -a one-of-a-kind key that will unlock a box that holds a priceless gift from her mother. A golden thread, presented to her at godfather Drosselmeyer's annual holiday party, leads her to the coveted key-which promptly disappears into a strange and mysterious parallel world..."
+  },
+  {
+    "Title": "John Wick",
+    "Type": "Adventure, Family, Fantasy",
+    "Year": "2014",
+    "Runtime": "101 min",
+    "Poster": "assets/images/john_wick.jpg",
+    "Description": "All Clara wants is a key -a one-of-a-kind key that will unlock a box that holds a priceless gift from her mother. A golden thread, presented to her at godfather Drosselmeyer's annual holiday party, leads her to the coveted key-which promptly disappears into a strange and mysterious parallel world..."
+  },
+  {
+    "Title": "Matrix",
+    "Type": "Adventure, Family, Fantasy",
+    "Year": "2004",
+    "Runtime": "123 min",
+    "Poster": "assets/images/matrix.jpg",
+    "Description": "All Clara wants is a key -a one-of-a-kind key that will unlock a box that holds a priceless gift from her mother. A golden thread, presented to her at godfather Drosselmeyer's annual holiday party, leads her to the coveted key-which promptly disappears into a strange and mysterious parallel world..."
+  }
+]

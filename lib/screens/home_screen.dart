@@ -1,5 +1,6 @@
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dynamic_link_app/constants/app_constants.dart';
 import 'package:flutter_dynamic_link_app/model/movies_model.dart';
 import 'package:flutter_dynamic_link_app/screens/movie_detail_screen.dart';
 import 'package:flutter_dynamic_link_app/services/json_service.dart';
@@ -16,12 +17,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String url = "";
-  List<MoviesModel> products = [];
+  String? url;
+  List<MoviesModel>? products;
   var name;
   var year;
   var imageUrl;
   var description;
+
+  init()
+  {
+    url = "";
+    products = [];
+  }
 
   @override
   void initState() {
@@ -56,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
     year = parts[3].trim();
     description = parts[4].trim();
     imageUrl = parts.sublist(5).join('/').trim();
-    if (navigationPrefix == "post") {
+    if (navigationPrefix == AppConstants.postString) {
       Navigator.push(
           context,
           MaterialPageRoute(
@@ -111,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: EdgeInsets.all(8.0),
       child: Center(
         child: Text(
-          "Popular Movies",
+          AppConstants.popularMoviesString,
           style: AppTextStyles.popularMoviesTextStyle,
         ),
       ),
@@ -133,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 12,
-                itemCount: products.length,
+                itemCount: products!.length,
                 itemBuilder: (context, index) {
                   return Container(
                     width: 260,
@@ -147,14 +154,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => MovieDetailScreen(
-                                      products[index].title!,
-                                      products[index].year!,
-                                      products[index].description!,
-                                      products[index].poster!)));
+                                      products![index].title!,
+                                      products![index].year!,
+                                      products![index].description!,
+                                      products![index].poster!)));
                         },
                         child: GridTile(
                           child: Image.asset(
-                            products[index].poster!,
+                            products![index].poster!,
                             fit: BoxFit.cover,
                           ),
                           footer: Container(
@@ -164,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 Expanded(
                                   child: Text(
-                                    products[index].title!,
+                                    products![index].title!,
                                     style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
@@ -179,17 +186,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                       try {
                                         url = await AppUtils
                                             .createDynamicLink(
-                                            products[index].title!,
-                                            products[index].year!,
-                                            products[index]
+                                            products![index].title!,
+                                            products![index].year!,
+                                            products![index]
                                                 .description!,
-                                            products[index].poster!);
+                                            products![index].poster!);
                                       } catch (e) {
                                         print(e);
                                       }
                                       setState(() {});
-                                      if (url.isNotEmpty) {
-                                        Share.share(url);
+                                      if (url!.isNotEmpty) {
+                                        Share.share(url!);
                                       }
                                     },
                                     icon: const Icon(Icons.share),

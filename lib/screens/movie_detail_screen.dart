@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dynamic_link_app/constants/app_constants.dart';
 import 'package:flutter_dynamic_link_app/utils/app_text_styles.dart';
 
 class MovieDetailScreen extends StatefulWidget {
@@ -52,7 +53,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   Column(
                     children: <Widget>[
                       const Text(
-                        'Year',
+                        AppConstants.yearString,
                         style: AppTextStyles.headingTextStyle
                       ),
                       const SizedBox(height: 2.0),
@@ -65,12 +66,12 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   Column(
                     children: const [
                       Text(
-                        'Country',
+                        AppConstants.countryString,
                         style: AppTextStyles.headingTextStyle
                       ),
                       SizedBox(height: 2.0),
                       Text(
-                        "USA",
+                        AppConstants.usaString,
                         style: AppTextStyles.headingBelowTextStyle
                       ),
                     ],
@@ -81,7 +82,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
               const Padding(
                 padding: EdgeInsets.fromLTRB(20,8, 20,0),
                 child: Text(
-                  "Description :",
+                  AppConstants.descriptionString,
                   style: AppTextStyles.simpleTextStyle,
                 ),
               ),
